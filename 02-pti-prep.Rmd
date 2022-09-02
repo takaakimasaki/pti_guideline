@@ -1,0 +1,3 @@
+# PTI preparation {#pti-prep}
+
+Second, identify indicators pertaining to the specific objectives. Once development objectives are agreed upon among stakeholders, indicators pertaining to those specific objectives are identified. Since PTI informs spatial targeting, these indicators need to be available at a subnational level (for example, villages, districts, regions, provinces). People most familiar with the country context—project teams, country experts. and sector specialists—should provide input on indicator selection. Teams may also consult GIS specialists in this selection process as a rich source of high-resolution socio-economic data is now available to inform spatial targeting at a highly disaggregated level.

@@ -1,0 +1,3 @@
+# Monitoring
+
+Fourth, construct final PTI. Based on the country team consensus on weighted indicators, a final PTI and corresponding map of priority areas is constructed.
