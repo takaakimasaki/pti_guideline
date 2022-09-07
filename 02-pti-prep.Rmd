@@ -24,7 +24,7 @@ The scripts to turn raw data into clean data are all stored in the `vignettes` f
 
 The PTI dashboard will allow users to see a wide range of subnational indicators at varying levels of geographical disaggregation. The first thing that you need to do is to create a `RDS` file that contains a list of shapefiles, which will be used for compiling all indicators down the road and then displayed in the dashboard. This `RDS` file would look like this:
 
-```{r setup, include=FALSE}
+```{r setup_lib, include=FALSE}
 #knitr::opts_chunk$set(fig.width = 12, 
 #                      fig.height = 5,
                       # fig.asp = 3/4,

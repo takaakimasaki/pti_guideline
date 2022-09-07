@@ -28,7 +28,7 @@ The Project Targeting Index (PTI) offers a framework for project and country tea
 The purpose of this guideline is to provide a guideline on how to create a PTI dashboard. It breaks down the process of building a PTI dashboard into four different phases as shown in the diagram below. The book consists of four chapters that correspond to these four steps: [Identification (Chapter 2)](#identification); [PTI preparation (Chapter 3)](#pti-prep); [Application (Chapter 4)](#application); and [Monitoring (Chapter 5)](#monitoring).   
 
 ```{r lifecycle, echo=FALSE, fig.cap="Lifecycle of the PTI project", out.width = '100%'}
-knitr::include_graphics("figure1/Slide1.png")
+knitr::include_graphics("images/slide1.png")
 
 ```
 

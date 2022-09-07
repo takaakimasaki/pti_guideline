@@ -11,7 +11,7 @@ The PTI process starts with the identification of development objectives. A clea
 Once the key development objectives or thematic areas of focus are determined, the next step is to identify indicators pertaining to each of those objectives or areas. Since the PTI informs spatial targeting, these indicators need to be available at a subnational level (for example, villages, districts, regions, provinces). People most familiar with the country context—project teams, country experts. and sector specialists alike should provide inputs on indicator selection. Teams may also consult GIS specialists in this selection process as a rich source of high-resolution socio-economic data is now available to inform spatial targeting at a highly disaggregated level.
 
 Again in the case of Zambia, below is a table that shows an example of some indicators identified under each pillar for [the Zambia PTI dashboard](https://wbg-poverty-gp.shinyapps.io/zamPTI/): 
-```{r setup, include=FALSE}
+```{r setup_meta, include=FALSE}
 #knitr::opts_chunk$set(fig.width = 12, 
 #                      fig.height = 5,
                       # fig.asp = 3/4,
