@@ -1,3 +1,43 @@
 # Identification {#identification}
 
-First, identify development objectives. A clear set of development objectives that can be measured objectively by data and evidence, and established in close coordination with the respective country teams, lays the groundwork for PTI mapping. Goals outlined in a Country Partnership Framework (CPF) are a good starting point to guide selection of development objectives. 
+## Determine thematic areas of focus
+The PTI process starts with the identification of development objectives. A clear set of development objectives that can be measured objectively by data and evidence, and established in close coordination with the respective country teams, lays the groundwork for PTI mapping. Goals outlined in a Country Partnership Framework (CPF) are a good starting point to guide selection of development objectives. In the case of Zambia^[The PTI dashboard for Zambia is available from https://wbg-poverty-gp.shinyapps.io/zamPTI/], for instance, there are three thematic areas that were taken directly from [CPF FY19-23](https://documents1.worldbank.org/curated/en/805841545925652368/pdf/Zambia-Country-Partnership-Framework-for-the-Period-FY19-FY23.pdf):
+
+1. More even territorial development with opportunities and jobs for the rural poor
+2. Public services and social protection for job participation
+3. Institutions for resilience
+
+## Identify key indicators under each thematic area
+Once the key development objectives or thematic areas of focus are determined, the next step is to identify indicators pertaining to each of those objectives or areas. Since the PTI informs spatial targeting, these indicators need to be available at a subnational level (for example, villages, districts, regions, provinces). People most familiar with the country context—project teams, country experts. and sector specialists alike should provide inputs on indicator selection. Teams may also consult GIS specialists in this selection process as a rich source of high-resolution socio-economic data is now available to inform spatial targeting at a highly disaggregated level.
+
+Again in the case of Zambia, below is a table that shows an example of some indicators identified under each pillar for [the Zambia PTI dashboard](https://wbg-poverty-gp.shinyapps.io/zamPTI/): 
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(fig.width = 12, 
+#                      fig.height = 5,
+                      # fig.asp = 3/4,
+                      # out.width = "60%",
+                      # fig.align = "center",
+                      # dpi = 150,
+#                      message = FALSE,
+#                      echo = FALSE,
+#                    warning = FALSE,
+#                      error = FALSE,
+#                      cache = FALSE
+#                      )
+
+# Packages
+conflictRules("tidyr", mask.ok = c("extract"))
+conflictRules("dplyr", mask.ok = c("filter", "lag", "select"))
+pacman::p_load(readxl,here,dplyr,sf)
+
+```
+
+
+```{r, echo=FALSE}
+metadata <- read_xlsx(here("..","zamPTIdata","data-clean","metadata","metadata.xlsx"),sheet=2) %>%
+  dplyr::select(var_name, pillar_name)
+
+knitr::kable(
+  head(metadata, 10), longtable = TRUE, booktabs = TRUE,
+  caption = 'Indicators and Pillars for Zambia PTI')
+```

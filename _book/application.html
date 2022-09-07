@@ -23,7 +23,7 @@
 <meta name="author" content="Takaaki Masaki" />
 
 
-<meta name="date" content="2022-09-02" />
+<meta name="date" content="2022-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,12 +69,35 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">PTI Guideline</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="identification.html"><a href="identification.html"><i class="fa fa-check"></i><b>2</b> Identification</a></li>
-<li class="chapter" data-level="3" data-path="pti-prep.html"><a href="pti-prep.html"><i class="fa fa-check"></i><b>3</b> PTI preparation</a></li>
+<li class="chapter" data-level="2" data-path="identification.html"><a href="identification.html"><i class="fa fa-check"></i><b>2</b> Identification</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="identification.html"><a href="identification.html#determine-thematic-areas-of-focus"><i class="fa fa-check"></i><b>2.1</b> Determine thematic areas of focus</a></li>
+<li class="chapter" data-level="2.2" data-path="identification.html"><a href="identification.html#identify-key-indicators-under-each-thematic-area"><i class="fa fa-check"></i><b>2.2</b> Identify key indicators under each thematic area</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="pti-prep.html"><a href="pti-prep.html"><i class="fa fa-check"></i><b>3</b> PTI preparation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="pti-prep.html"><a href="pti-prep.html#setup-data-cleaning"><i class="fa fa-check"></i><b>3.1</b> Setup: Data cleaning</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="pti-prep.html"><a href="pti-prep.html#getting-shapefiles-ready"><i class="fa fa-check"></i><b>3.1.1</b> Getting shapefiles ready</a></li>
+<li class="chapter" data-level="3.1.2" data-path="pti-prep.html"><a href="pti-prep.html#generate-indicators"><i class="fa fa-check"></i><b>3.1.2</b> Generate indicators</a></li>
+<li class="chapter" data-level="3.1.3" data-path="pti-prep.html"><a href="pti-prep.html#computing-zonal-statistics"><i class="fa fa-check"></i><b>3.1.3</b> Computing zonal statistics</a></li>
+<li class="chapter" data-level="3.1.4" data-path="pti-prep.html"><a href="pti-prep.html#manually-matching-location-names"><i class="fa fa-check"></i><b>3.1.4</b> Manually matching location names</a></li>
+<li class="chapter" data-level="3.1.5" data-path="pti-prep.html"><a href="pti-prep.html#common-indicators-to-be-included"><i class="fa fa-check"></i><b>3.1.5</b> Common indicators to be included</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="pti-prep.html"><a href="pti-prep.html#setup-launching-a-dashboard"><i class="fa fa-check"></i><b>3.2</b> Setup: Launching a dashboard</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="pti-prep.html"><a href="pti-prep.html#install-the-devptipack-package"><i class="fa fa-check"></i><b>3.2.1</b> Install the <code>devPTIpack</code> package</a></li>
+<li class="chapter" data-level="3.2.2" data-path="pti-prep.html"><a href="pti-prep.html#metadata"><i class="fa fa-check"></i><b>3.2.2</b> Create a metadata</a></li>
+<li class="chapter" data-level="3.2.3" data-path="pti-prep.html"><a href="pti-prep.html#metadata_pdf"><i class="fa fa-check"></i><b>3.2.3</b> Generate a PDF document of a metadata</a></li>
+<li class="chapter" data-level="3.2.4" data-path="pti-prep.html"><a href="pti-prep.html#landing_page"><i class="fa fa-check"></i><b>3.2.4</b> Edit contents in the landing page of the dashboard</a></li>
+<li class="chapter" data-level="3.2.5" data-path="pti-prep.html"><a href="pti-prep.html#prepare-zip-folder-that-contains-all-levels-of-shapefiles-for-download"><i class="fa fa-check"></i><b>3.2.5</b> Prepare zip folder that contains all levels of shapefiles for download</a></li>
+<li class="chapter" data-level="3.2.6" data-path="pti-prep.html"><a href="pti-prep.html#launch-an-app"><i class="fa fa-check"></i><b>3.2.6</b> Launch an app</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="application.html"><a href="application.html"><i class="fa fa-check"></i><b>4</b> Application</a></li>
 <li class="chapter" data-level="5" data-path="monitoring.html"><a href="monitoring.html"><i class="fa fa-check"></i><b>5</b> Monitoring</a></li>
 <li class="divider"></li>
@@ -99,7 +122,12 @@
             <section class="normal" id="section-">
 <div id="application" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Application<a href="application.html#application" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Third, construct a composite weighted index. Once a set of indicators has been identified, these indicators are aggregated to construct a composite index. Often, some indicators vary significantly across a country. One example is the number of poor people living in each district. If such an indicator is combined with other indicators with limited variation, the composite PTI indicator tends to heavily reflect the geographic pattern of the poor population. To avoid this, the PTI standardizes all indicators to have mean and variance of 0 and 1 respectively. These standardized indicators are then combined into a composite index. The PTI aggregates the standardized indicators with weights, which reflect the relative importance of each variable. As the weight of an indicator increases, the geographic distribution of priority areas of PTI is more affected by that indicator. To facilitate the process of choosing which weights to assign to different indicators, the PTI tool includes an interactive online dashboard that creates a map of priority areas based on selection of indicators and weights so that country team members can easily see the implications that changing weights have on the map of priorities.</p>
+<p>Once the PTI dashboard is launched, you can use it to construct a composite weighted index. You first need to select a set of indicators that should be used to construct a PTI. The PTI is a composite index of several development indicators chosen to inform geographical targeting. Often, some indicators vary significantly across a country. One example is the number of poor people living in each district. If such an indicator is combined with other indicators with limited variation, the composite PTI indicator tends to heavily reflect the geographic pattern of the poor population. To avoid this, the PTI standardizes all indicators to have mean and variance of 0 and 1 respectively. These standardized indicators are then combined into a composite index. The PTI aggregates the standardized indicators with weights, which reflect the relative importance of each variable. As the weight of an indicator increases, the geographic distribution of priority areas of PTI is more affected by that indicator. More formally, the PTI can be expressed as follows:</p>
+<p><span class="math display">\[\begin{array}{ccc}
+PTI = \Sigma_{i=1}^{n} z_i \times w_i
+\end{array}\]</span>
+where <span class="math inline">\(z_i\)</span> is the z-score of indicator <span class="math inline">\(i\)</span> used to compute the PTI and <span class="math inline">\(w_i\)</span> is the weight assigned to each indicator.</p>
+<p>To facilitate the process of choosing which weights to assign to different indicators, the PTI dashboard can be used to test different variants of the PTI using a different permutation of indicators and weights and evaluate how priority areas may change under different assumptions.</p>
 
 </div>
             </section>
@@ -162,6 +190,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

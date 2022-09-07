@@ -23,7 +23,7 @@
 <meta name="author" content="Takaaki Masaki" />
 
 
-<meta name="date" content="2022-09-02" />
+<meta name="date" content="2022-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,7 +54,93 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -69,12 +155,35 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">PTI Guideline</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="identification.html"><a href="identification.html"><i class="fa fa-check"></i><b>2</b> Identification</a></li>
-<li class="chapter" data-level="3" data-path="pti-prep.html"><a href="pti-prep.html"><i class="fa fa-check"></i><b>3</b> PTI preparation</a></li>
+<li class="chapter" data-level="2" data-path="identification.html"><a href="identification.html"><i class="fa fa-check"></i><b>2</b> Identification</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="identification.html"><a href="identification.html#determine-thematic-areas-of-focus"><i class="fa fa-check"></i><b>2.1</b> Determine thematic areas of focus</a></li>
+<li class="chapter" data-level="2.2" data-path="identification.html"><a href="identification.html#identify-key-indicators-under-each-thematic-area"><i class="fa fa-check"></i><b>2.2</b> Identify key indicators under each thematic area</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="pti-prep.html"><a href="pti-prep.html"><i class="fa fa-check"></i><b>3</b> PTI preparation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="pti-prep.html"><a href="pti-prep.html#setup-data-cleaning"><i class="fa fa-check"></i><b>3.1</b> Setup: Data cleaning</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="pti-prep.html"><a href="pti-prep.html#getting-shapefiles-ready"><i class="fa fa-check"></i><b>3.1.1</b> Getting shapefiles ready</a></li>
+<li class="chapter" data-level="3.1.2" data-path="pti-prep.html"><a href="pti-prep.html#generate-indicators"><i class="fa fa-check"></i><b>3.1.2</b> Generate indicators</a></li>
+<li class="chapter" data-level="3.1.3" data-path="pti-prep.html"><a href="pti-prep.html#computing-zonal-statistics"><i class="fa fa-check"></i><b>3.1.3</b> Computing zonal statistics</a></li>
+<li class="chapter" data-level="3.1.4" data-path="pti-prep.html"><a href="pti-prep.html#manually-matching-location-names"><i class="fa fa-check"></i><b>3.1.4</b> Manually matching location names</a></li>
+<li class="chapter" data-level="3.1.5" data-path="pti-prep.html"><a href="pti-prep.html#common-indicators-to-be-included"><i class="fa fa-check"></i><b>3.1.5</b> Common indicators to be included</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="pti-prep.html"><a href="pti-prep.html#setup-launching-a-dashboard"><i class="fa fa-check"></i><b>3.2</b> Setup: Launching a dashboard</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="pti-prep.html"><a href="pti-prep.html#install-the-devptipack-package"><i class="fa fa-check"></i><b>3.2.1</b> Install the <code>devPTIpack</code> package</a></li>
+<li class="chapter" data-level="3.2.2" data-path="pti-prep.html"><a href="pti-prep.html#metadata"><i class="fa fa-check"></i><b>3.2.2</b> Create a metadata</a></li>
+<li class="chapter" data-level="3.2.3" data-path="pti-prep.html"><a href="pti-prep.html#metadata_pdf"><i class="fa fa-check"></i><b>3.2.3</b> Generate a PDF document of a metadata</a></li>
+<li class="chapter" data-level="3.2.4" data-path="pti-prep.html"><a href="pti-prep.html#landing_page"><i class="fa fa-check"></i><b>3.2.4</b> Edit contents in the landing page of the dashboard</a></li>
+<li class="chapter" data-level="3.2.5" data-path="pti-prep.html"><a href="pti-prep.html#prepare-zip-folder-that-contains-all-levels-of-shapefiles-for-download"><i class="fa fa-check"></i><b>3.2.5</b> Prepare zip folder that contains all levels of shapefiles for download</a></li>
+<li class="chapter" data-level="3.2.6" data-path="pti-prep.html"><a href="pti-prep.html#launch-an-app"><i class="fa fa-check"></i><b>3.2.6</b> Launch an app</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="application.html"><a href="application.html"><i class="fa fa-check"></i><b>4</b> Application</a></li>
 <li class="chapter" data-level="5" data-path="monitoring.html"><a href="monitoring.html"><i class="fa fa-check"></i><b>5</b> Monitoring</a></li>
 <li class="divider"></li>
@@ -99,8 +208,570 @@
             <section class="normal" id="section-">
 <div id="pti-prep" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Chapter 3</span> PTI preparation<a href="pti-prep.html#pti-prep" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Second, identify indicators pertaining to the specific objectives. Once development objectives are agreed upon among stakeholders, indicators pertaining to those specific objectives are identified. Since PTI informs spatial targeting, these indicators need to be available at a subnational level (for example, villages, districts, regions, provinces). People most familiar with the country context—project teams, country experts. and sector specialists—should provide input on indicator selection. Teams may also consult GIS specialists in this selection process as a rich source of high-resolution socio-economic data is now available to inform spatial targeting at a highly disaggregated level.</p>
+<p>The next step in the PTI process is to create a PTI dashboard. This dashboard primarily serves two purposes: 1) a one-stop shop that offers a wide range of subnational indicators readily available and accessible; and 2) a user-friendly tool to make the calculation of a PTI easy, flexible and adaptable. There are already a number of countries where the dashboard is already up and running. This section walks you through how to build a PTI dashboard from scratch. All the baseline infrastructure that goes into the construction of a PTI dashboard is prepared in R so please skip the rest of this section if you are not responsible for writing R scripts to prepare data and launch the PTI dashboard.</p>
+<div id="setup-data-cleaning" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Setup: Data cleaning<a href="pti-prep.html#setup-data-cleaning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The first thing that you need to do is to prepare data that goes into a PTI dashboard. We typically create a new folder called xxxPTIdata (where xxx is ISO-3 country code, e.g., moz for Mozambique) to manage scripts for cleaning and merging data. Here is a recommended folder structure for xxxPTIdata:</p>
+<pre><code>+-- data-clean
+|   \-- metadata/metadata.xlsx
++-- data-raw
++-- dev
++-- vignettes
++-- xxxPTIdata.Rproj
++-- .gitignore</code></pre>
+<p>where <code>data-clean</code> contains clean data ready to be merged; <code>data-raw</code> all raw datasets; <code>dev</code> functions used to clean and visualize data; and <code>vignettes</code> R scripts to clean data. You can find a concrete example for <a href="https://github.com/takaakimasaki/zamPTIdata">Zambia PTI work</a>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> Please note that <code>data-clean/metadata/metadata.xlsx</code> should contain the description of all indicators to be included in the dashboard. We will come back to this topic in <a href="pti-prep.html#metadata">Section 3.1.2</a>.</p>
+<p>In the following sections, we will walk you through several key steps that need to be followed to prepare a dataset using the <a href="https://wbg-poverty-gp.shinyapps.io/zamPTI/">Zambia PTI dashboard</a> and the <a href="https://github.com/takaakimasaki/zamPTIdata"><code>zamPTIdata</code></a> repo as an example.</p>
+<p>The scripts to turn raw data into clean data are all stored in the <code>vignettes</code> folder and make sure that these scripts are numbered in order of how they should be sequentially run to produce all the clean datasets needed at the end. And clean data should all be saved in the <code>RDS</code> format in the <code>data-clean</code> folder and ensure that <em>all</em> baseline shapefiles are included in each of the clean data file. See how the <code>data-clean</code> folder should look like again in the example of the <a href="https://github.com/takaakimasaki/zamPTIdata"><code>zamPTIdata</code></a> repo.</p>
+<div id="getting-shapefiles-ready" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Getting shapefiles ready<a href="pti-prep.html#getting-shapefiles-ready" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The PTI dashboard will allow users to see a wide range of subnational indicators at varying levels of geographical disaggregation. The first thing that you need to do is to create a <code>RDS</code> file that contains a list of shapefiles, which will be used for compiling all indicators down the road and then displayed in the dashboard. This <code>RDS</code> file would look like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="pti-prep.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#set your own path</span></span>
+<span id="cb2-2"><a href="pti-prep.html#cb2-2" aria-hidden="true" tabindex="-1"></a>shp <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">&quot;..&quot;</span>,<span class="st">&quot;zamPTIdata&quot;</span>,<span class="st">&quot;data-clean&quot;</span>,<span class="st">&quot;app-shapes&quot;</span>,<span class="st">&quot;Zambia.rds&quot;</span>)) </span>
+<span id="cb2-3"><a href="pti-prep.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="pti-prep.html#cb2-4" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb2-5"><a href="pti-prep.html#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(shp<span class="sc">$</span>admin0_Country, <span class="dv">10</span>), <span class="at">longtable =</span> <span class="cn">TRUE</span>, <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-6"><a href="pti-prep.html#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&#39;ADM0 level&#39;</span>)</span></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 3.1: </span>ADM0 level</caption>
+<thead>
+<tr class="header">
+<th align="left">admin0Pcod</th>
+<th align="left">admin0Name</th>
+<th align="right">area</th>
+<th align="left">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">Zambia</td>
+<td align="right">751013.2</td>
+<td align="left">POLYGON ((29.8147 -12.14969…</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="pti-prep.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb3-2"><a href="pti-prep.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(shp<span class="sc">$</span>admin1_Provinces, <span class="dv">10</span>), <span class="at">longtable =</span> <span class="cn">TRUE</span>, <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb3-3"><a href="pti-prep.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&#39;ADM1 level&#39;</span>)</span></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 3.1: </span>ADM1 level</caption>
+<colgroup>
+<col width="14%" />
+<col width="18%" />
+<col width="14%" />
+<col width="12%" />
+<col width="40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">admin0Pcod</th>
+<th align="left">admin1Name</th>
+<th align="left">admin1Pcod</th>
+<th align="right">area</th>
+<th align="left">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">Central</td>
+<td align="left">ZM01</td>
+<td align="right">110297.90</td>
+<td align="left">POLYGON ((30.00306 -12.0055…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">Copperbelt</td>
+<td align="left">ZM02</td>
+<td align="right">31107.11</td>
+<td align="left">POLYGON ((29.04166 -13.405,…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">Eastern</td>
+<td align="left">ZM03</td>
+<td align="right">51580.35</td>
+<td align="left">POLYGON ((30.2157 -14.99794…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">Luapula</td>
+<td align="left">ZM04</td>
+<td align="right">49758.54</td>
+<td align="left">POLYGON ((29.5963 -8.39965,…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">Lusaka</td>
+<td align="left">ZM05</td>
+<td align="right">23482.33</td>
+<td align="left">POLYGON ((30.00696 -14.6478…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">Muchinga</td>
+<td align="left">ZM06</td>
+<td align="right">86396.91</td>
+<td align="left">POLYGON ((31.43652 -13.4282…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">Northern</td>
+<td align="left">ZM07</td>
+<td align="right">77575.01</td>
+<td align="left">POLYGON ((30.46914 -11.5060…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">North-Western</td>
+<td align="left">ZM08</td>
+<td align="right">125233.63</td>
+<td align="left">POLYGON ((27.62284 -12.2642…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">Southern</td>
+<td align="left">ZM09</td>
+<td align="right">68188.45</td>
+<td align="left">POLYGON ((27.79242 -15.6562…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">Western</td>
+<td align="left">ZM10</td>
+<td align="right">127392.98</td>
+<td align="left">POLYGON ((22.80016 -13.9271…</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="pti-prep.html#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb4-2"><a href="pti-prep.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(shp<span class="sc">$</span>admin2_Districts, <span class="dv">10</span>), <span class="at">longtable =</span> <span class="cn">TRUE</span>, <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-3"><a href="pti-prep.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&#39;ADM2 level&#39;</span>)</span></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 3.1: </span>ADM2 level</caption>
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="24%" />
+<col width="11%" />
+<col width="10%" />
+<col width="31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">admin0Pcod</th>
+<th align="left">admin1Pcod</th>
+<th align="left">admin2Name</th>
+<th align="left">admin2Pcod</th>
+<th align="right">area</th>
+<th align="left">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Chibombo (Central)</td>
+<td align="left">ZM01001</td>
+<td align="right">8215.325</td>
+<td align="left">POLYGON ((27.96703 -14.5433…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Chisamba (Central)</td>
+<td align="left">ZM01002</td>
+<td align="right">5214.521</td>
+<td align="left">POLYGON ((28.76713 -14.4848…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Chitambo (Central)</td>
+<td align="left">ZM01003</td>
+<td align="right">11955.413</td>
+<td align="left">POLYGON ((30.00306 -12.0055…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Itezhi-Tezhi (Central)</td>
+<td align="left">ZM01004</td>
+<td align="right">15766.316</td>
+<td align="left">POLYGON ((26.92062 -15.3425…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Kabwe (Central)</td>
+<td align="left">ZM01005</td>
+<td align="right">1572.175</td>
+<td align="left">POLYGON ((28.58738 -14.3240…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Kapiri Mposhi (Central)</td>
+<td align="left">ZM01006</td>
+<td align="right">9706.994</td>
+<td align="left">POLYGON ((28.95127 -13.7402…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Luano (Central)</td>
+<td align="left">ZM01007</td>
+<td align="right">9190.521</td>
+<td align="left">POLYGON ((30.09566 -13.9370…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Mkushi (Central)</td>
+<td align="left">ZM01008</td>
+<td align="right">8458.282</td>
+<td align="left">POLYGON ((29.81472 -13.4445…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Mumbwa (Central)</td>
+<td align="left">ZM01009</td>
+<td align="right">19771.203</td>
+<td align="left">POLYGON ((27.18975 -14.3735…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">Ngabwe (Central)</td>
+<td align="left">ZM01010</td>
+<td align="right">7199.490</td>
+<td align="left">POLYGON ((27.90627 -13.7468…</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="pti-prep.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb5-2"><a href="pti-prep.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(shp<span class="sc">$</span>admin4_Wards, <span class="dv">10</span>), <span class="at">longtable =</span> <span class="cn">TRUE</span>, <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-3"><a href="pti-prep.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&#39;ADM4 level&#39;</span>)</span></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 3.1: </span>ADM4 level</caption>
+<colgroup>
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="12%" />
+<col width="25%" />
+<col width="8%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">admin0Pcod</th>
+<th align="left">admin1Pcod</th>
+<th align="left">admin2Pcod</th>
+<th align="left">admin4Pcod</th>
+<th align="left">admin4Name</th>
+<th align="right">area</th>
+<th align="left">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM010030011320</td>
+<td align="left">Nakatambo (Central, Chitambo)</td>
+<td align="right">395.3747</td>
+<td align="left">MULTIPOLYGON (((30.7445 -12…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM010030011509</td>
+<td align="left">Serenje (Central, Chitambo)</td>
+<td align="right">2950.4618</td>
+<td align="left">MULTIPOLYGON (((31.43652 -1…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM01003002232</td>
+<td align="left">Chitambo (Central, Chitambo)</td>
+<td align="right">520.3245</td>
+<td align="left">MULTIPOLYGON (((30.65049 -1…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM01003002854</td>
+<td align="left">Lushibashi (Central, Chitambo)</td>
+<td align="right">396.4900</td>
+<td align="left">MULTIPOLYGON (((31.08922 -1…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM01003003903</td>
+<td align="left">Mailo (Central, Chitambo)</td>
+<td align="right">537.6592</td>
+<td align="left">MULTIPOLYGON (((31.0428 -13…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM010030031102</td>
+<td align="left">Muchinka (Central, Chitambo)</td>
+<td align="right">591.3521</td>
+<td align="left">MULTIPOLYGON (((30.51108 -1…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM01003004529</td>
+<td align="left">Kanona (Central, Chitambo)</td>
+<td align="right">439.3822</td>
+<td align="left">MULTIPOLYGON (((30.78928 -1…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM01003004851</td>
+<td align="left">Lusenga (Central, Chitambo)</td>
+<td align="right">888.2952</td>
+<td align="left">MULTIPOLYGON (((30.54117 -1…</td>
+</tr>
+<tr class="odd">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM0100300554</td>
+<td align="left">Chalilo (Central, Chitambo)</td>
+<td align="right">521.1124</td>
+<td align="left">MULTIPOLYGON (((30.45699 -1…</td>
+</tr>
+<tr class="even">
+<td align="left">ZM</td>
+<td align="left">ZM01</td>
+<td align="left">ZM01003</td>
+<td align="left">ZM010030051298</td>
+<td align="left">Mweshe (Central, Chitambo)</td>
+<td align="right">584.6538</td>
+<td align="left">MULTIPOLYGON (((30.79702 -1…</td>
+</tr>
+</tbody>
+</table>
+<p>In this specific case, there are four levels of shapefiles contained within this <code>list</code> object: ADM0 (country); ADM1 (Province); ADM2 (District); and ADM4 (Wards). We selected these four different levels of geographical aggregation for Zambia PTI because most indicators that we have for the country are available only at these levels.^{Of course, if you want to add more layers, you are free to do so but the number of layers you may wan to have in the dashboard depends on need and demand of your intended users.}.</p>
+<p>When you create this <code>RDS</code> file, it is critical that you have the following attributes:</p>
+<ul>
+<li>Each shapefile contains <code>admin\*Pcod</code>, <code>admin\*Name</code>, and <code>area</code> where <code>admin\*Pcod</code> is a location ID (which typically comes with the original shapefile you download online or obtain from colleagues but you can also create your own ID if you like); <code>admin\*Name</code> the name of a location; <code>area</code> is the size of area.</li>
+<li>For those shapefiles at ADM<code>x</code> where <code>x</code>&lt;<code>y</code> and <code>y</code> is the highest level of geographcial aggregation (which is almost always admin 0), make sure to include all the <code>admin\*Pcod</code> from shapefiles at admin <code>z</code> &gt; <code>x</code> so that the final <code>RDS</code> file can make a link across different levels of geographical data using <code>admin\*Pcod</code>. For example, the shapefile of ADM1 should contain admin0Pcod from the shapefile of ADM0 and the shapefile of ADM2 should contain admin0Pcod and admin1Pcod from the shapefiles of ADM0 and ADM1, and so on.</li>
+<li>Make sure to include ADM0 shapefile. Otherwise the R package used to launch a PTI dashboard will not run.</li>
+</ul>
+<p>With all these points in mind, let’s create a <code>RDS</code> file that contains the shapefiles of all levels. Below is just a sample code from the zamPTIdata repo:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="pti-prep.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">##read ADM1 shapefile</span></span>
+<span id="cb6-2"><a href="pti-prep.html#cb6-2" aria-hidden="true" tabindex="-1"></a>admin1 <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">&quot;data-raw&quot;</span>,<span class="st">&quot;admin-boundaries&quot;</span>,<span class="st">&quot;grid3-zam-admin&quot;</span>,<span class="st">&quot;shapefiles&quot;</span>,<span class="st">&quot;admin1_provinces.shp&quot;</span>))</span>
+<span id="cb6-3"><a href="pti-prep.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="pti-prep.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">##generate ADM0 shapefile from ADM1 shapefile </span></span>
+<span id="cb6-5"><a href="pti-prep.html#cb6-5" aria-hidden="true" tabindex="-1"></a>admin0 <span class="ot">&lt;-</span> admin1 <span class="sc">%&gt;%</span></span>
+<span id="cb6-6"><a href="pti-prep.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">admin0Pcod =</span> <span class="st">&quot;ZM&quot;</span>,</span>
+<span id="cb6-7"><a href="pti-prep.html#cb6-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">admin0Name =</span> <span class="st">&quot;Zambia&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-8"><a href="pti-prep.html#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(admin0Pcod, admin0Name) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-9"><a href="pti-prep.html#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">area =</span> <span class="fu">sum</span>(area)) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-10"><a href="pti-prep.html#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb6-11"><a href="pti-prep.html#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_make_valid</span>()</span>
+<span id="cb6-12"><a href="pti-prep.html#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="pti-prep.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="do">##read ADM2 shapefile</span></span>
+<span id="cb6-14"><a href="pti-prep.html#cb6-14" aria-hidden="true" tabindex="-1"></a>admin2 <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">&quot;data-raw&quot;</span>,<span class="st">&quot;admin-boundaries&quot;</span>,<span class="st">&quot;grid3-zam-admin&quot;</span>,<span class="st">&quot;shapefiles&quot;</span>,<span class="st">&quot;admin2_districts.shp&quot;</span>))</span>
+<span id="cb6-15"><a href="pti-prep.html#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="pti-prep.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="do">##read ADM4 shapefile</span></span>
+<span id="cb6-17"><a href="pti-prep.html#cb6-17" aria-hidden="true" tabindex="-1"></a>admin4 <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">&quot;data-raw&quot;</span>,<span class="st">&quot;admin-boundaries&quot;</span>,<span class="st">&quot;grid3-zam-admin&quot;</span>,<span class="st">&quot;shapefiles&quot;</span>,<span class="st">&quot;admin4_wards.shp&quot;</span>))</span>
+<span id="cb6-18"><a href="pti-prep.html#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="pti-prep.html#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="do">##combine all levels</span></span>
+<span id="cb6-20"><a href="pti-prep.html#cb6-20" aria-hidden="true" tabindex="-1"></a>zam_bnd <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb6-21"><a href="pti-prep.html#cb6-21" aria-hidden="true" tabindex="-1"></a>zam_bnd<span class="sc">$</span>admin0_Country <span class="ot">&lt;-</span> admin0</span>
+<span id="cb6-22"><a href="pti-prep.html#cb6-22" aria-hidden="true" tabindex="-1"></a>zam_bnd<span class="sc">$</span>admin1_Provinces <span class="ot">&lt;-</span> admin0</span>
+<span id="cb6-23"><a href="pti-prep.html#cb6-23" aria-hidden="true" tabindex="-1"></a>zam_bnd<span class="sc">$</span>admin2_Districts <span class="ot">&lt;-</span> admin2</span>
+<span id="cb6-24"><a href="pti-prep.html#cb6-24" aria-hidden="true" tabindex="-1"></a>zam_bnd<span class="sc">$</span>admin4_Wards <span class="ot">&lt;-</span> admin4</span>
+<span id="cb6-25"><a href="pti-prep.html#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="pti-prep.html#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="do">##now save this baseline shapefile data in RDS file. </span></span>
+<span id="cb6-27"><a href="pti-prep.html#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#zam_bnd %&gt;% readr::write_rds(here(&quot;data-clean&quot;,&quot;app-shapes&quot;,&quot;Zambia.rds&quot;), compress = &quot;gz&quot;)</span></span></code></pre></div>
+<p>Once you create the baseline <code>RDS</code> file that contains all levels of administrative boundary shapefiles, save it in the <code>data-clean</code> folder.</p>
+</div>
+<div id="generate-indicators" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Generate indicators<a href="pti-prep.html#generate-indicators" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once you have the baseline shapefile data and stored it in the <code>data-clean</code> folder, you can start generating and integrating indicators. As mentioned earlier in <a href="identification.html#identification">Chapter 2</a>, a set of indicators that goes into the PTI dashboard depends on the objectives of a PTI dashboard. This means that there is no one-size-fits-all guideline on how to create these indicators. That said, there are a common set of routine data operations that we typically form for all PTI dashboards. In the following subsections, we discuss some of these operations and some sample R scripts to perform them.</p>
+</div>
+<div id="computing-zonal-statistics" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Computing zonal statistics<a href="pti-prep.html#computing-zonal-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One common data operation that we perform is to compute zonal statistics based on raster data. Let’s say we want to compute the sum or mean of gridded raster population data from <a href="https://www.worldpop.org/">WorldPop</a> at each level of geographical disaggregation. The <a href="https://cran.r-project.org/web/packages/exactextractr/index.html"><code>exactextractr</code></a> package and <code>purrr::map</code> are very useful for this purpose.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> See <a href="https://github.com/takaakimasaki/zamPTIdata/blob/main/vignettes/06-population-high-res-data.R"><code>vignettes/06.population-high-res-data.R</code></a> from the <a href="https://github.com/takaakimasaki/zamPTIdata"><code>zamPTIdata</code></a> repo as an example.</p>
+<p>It is always suggested that zonal statistics generated based on raster data are computed at <em>all</em> levels of shapefiles. The reason is that when the dashboard is launched, these data can be displayed at different levels of aggregation if they are prepared for each level of shapefile.</p>
+</div>
+<div id="manually-matching-location-names" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> Manually matching location names<a href="pti-prep.html#manually-matching-location-names" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You may need to manually match location names to the baseline shapefiles if the input data that you are trying to integrate do not already have unique location IDs or names that match perfectly with the respective shapefile. In such instances, make sure that you prepare a spreadsheet (either in Excel, CSV, or other format alike) that matches the location names between your input data and shapefile. See <a href="https://github.com/takaakimasaki/zamPTIdata/blob/main/vignettes/07-zamstat-population-district.R"><code>vignettes/07-zamstat-population-district.R</code></a>, which matches a dataset on the district-level population from the population census with the district-level shapefile using a cross-over table <code>data-raw/population-data/cso/cso-pop-2020-voters.xlsx</code>.</p>
+</div>
+<div id="common-indicators-to-be-included" class="section level3 hasAnchor" number="3.1.5">
+<h3><span class="header-section-number">3.1.5</span> Common indicators to be included<a href="pti-prep.html#common-indicators-to-be-included" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="human-capital-and-health" class="section level4 hasAnchor" number="3.1.5.1">
+<h4><span class="header-section-number">3.1.5.1</span> Human capital and health<a href="pti-prep.html#human-capital-and-health" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Human capital and health indicators are almost always included in the PTI dashboard given that they often serve as one of the key criteria for geographical targeting. These indicators are commonly derived from Demographic Health Survey (DHS), household budget survey (HBS), Multiple Indicator Cluster Surveys (MICS), population census among others. As for DHS, there is a nice <a href="https://www.statcompiler.com/en/">website</a> where you can easily download the indicators of your interest and match them with administrative boundary shapefiles, which also are available from the DHS geospatial <a href="https://spatialdata.dhsprogram.com/home/">portal</a>.</p>
+</div>
+<div id="accessibility" class="section level4 hasAnchor" number="3.1.5.2">
+<h4><span class="header-section-number">3.1.5.2</span> Accessibility<a href="pti-prep.html#accessibility" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Another common set of indicators that we typically generate includes measures of accessibility. Two common usedly indices include the Market Access Index (MAI)<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> and the Rural Access Index (RAI).<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. Since these indicators are included in almost all PTI dashboards, we created a R package specifically for this purpose. Please refer to <a href="https://github.com/takaakimasaki/devaccess">the <code>devaccess</code> package</a>. In the package <a href="https://github.com/takaakimasaki/devaccess">website</a>, you find concrete examples walking you through how these indices can be constructed based on publicly available data. You can also see how the MAI was calculated for Zambia in <a href="https://github.com/takaakimasaki/zamPTIdata/blob/main/vignettes/13-mai.R"><code>vignettes/13-mai.R</code></a>.</p>
+</div>
+<div id="natural-disaster-and-conflict-risks" class="section level4 hasAnchor" number="3.1.5.3">
+<h4><span class="header-section-number">3.1.5.3</span> Natural disaster and conflict risks<a href="pti-prep.html#natural-disaster-and-conflict-risks" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Another set of indicators that are commonly included in a PTI dashboard seeks to measure natural disaster and fragility risks. We also generated routine functions that are now summarized in the <a href="https://github.com/takaakimasaki/devdisaster"><code>devdisaster</code></a> package. This package allows you to compute various measures of natural disaster and fragility risks. See the package <a href="https://github.com/takaakimasaki/devdisaster">website</a> for more details.</p>
+</div>
+</div>
+</div>
+<div id="setup-launching-a-dashboard" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Setup: Launching a dashboard<a href="pti-prep.html#setup-launching-a-dashboard" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that you have clean data ready to be merged in the <code>data-clean</code> folder, it is time to prepare a dashboard. The way we do this is through <code>r-shiny</code>. There are many tutorials on <code>r-shiny</code> and if you are unfamiliar with it, we highly recommend that you take one of these tutorials. The most basic tutorial is available from <a href="https://shiny.rstudio.com/tutorial/">here</a>.</p>
+<p>That said, you do not necessarily need to know nuts and bolts about <code>r-shiny</code> to launch a PTI dashboard. Because we routinely create a PTI dashboard with the same layout and functionalities for many different countries, we have created a R package specifically for this purpose: <a href="https://github.com/EBukin/devPTIpack"><code>devPTIpack</code></a>. The package <a href="https://github.com/EBukin/devPTIpack">website</a> offers a wide range of functions beyond just simply greating a dashboard so if you are interested in digging deeper, please refer to the package website. In this guideline, we will basically cover minimum steps required to launch an app using the package.</p>
+<div id="install-the-devptipack-package" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Install the <code>devPTIpack</code> package<a href="pti-prep.html#install-the-devptipack-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The first thing you need to do is to create a folder specifically for your dashboard. This folder needs to follow a certain structure. You can create it by using <code>create_new_pti()</code> in the <code>devPTIpack</code> package. For instance, if you want to create a dashboard for country xxx, you will run the following codes:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="pti-prep.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install development version from GitHub</span></span>
+<span id="cb7-2"><a href="pti-prep.html#cb7-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;EBukin/devPTIpack&quot;</span>)</span>
+<span id="cb7-3"><a href="pti-prep.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#devPTIpack::create_new_pti(&quot;PATH-TO-NEW-PROJECT-LOCATION/PROJECT-NAME&quot;)</span></span>
+<span id="cb7-4"><a href="pti-prep.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="pti-prep.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#-   `PATH-TO-NEW-PROJECT-LOCATION` is a relative or an absolute path to the folder, where the app should be created.</span></span>
+<span id="cb7-6"><a href="pti-prep.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="pti-prep.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#-   a new sub-folder with the app itself will be created with the name `PROJECT-NAME`.</span></span>
+<span id="cb7-8"><a href="pti-prep.html#cb7-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-9"><a href="pti-prep.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">##For instance, you can specify a path as follows:</span></span>
+<span id="cb7-10"><a href="pti-prep.html#cb7-10" aria-hidden="true" tabindex="-1"></a>devPTIpack<span class="sc">::</span><span class="fu">create_new_pti</span>(<span class="st">&quot;C:/Users/WB495141/GitHub/xxxPTI&quot;</span>)</span></code></pre></div>
+<p>This sample script will create a new folder called <code>xxxPTI</code> in this directory <code>C:/Users/WB495141/GitHub</code>. In it, you find the following file structure:</p>
+<pre><code>+-- app-data
+|   \-- metadata.Rmd
++-- app.R
++-- xxxPTI.Rproj
++-- landing-page.md
+\-- R
+|   \-- _disable_autoload.R</code></pre>
+<p>We will explain what each file does in this new folder in the following sections.</p>
+</div>
+<div id="metadata" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Create a metadata<a href="pti-prep.html#metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that all your datasets are cleaned and ready to be merged, you can use <code>xxxPTIdata/vignettes/100-compilation.Rmd</code><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> to compile all datasets, create a metadata, which contains both the descriptions of all the indicators as well as the data to be displayed in the dashboard, and save the list data of all the administrative boundary shapefiles <code>admin_bounds.rds</code> in the <code>xxxPTI/app-data</code> folder.</p>
+<p>The metadata will contain the following sheets:</p>
+<ul>
+<li>general: contains country name (e.g., Zambia, Tanzania, Kenya)</li>
+<li>metadata: includes the following variables:
+<ul>
+<li>var_code: variable name in the dataset</li>
+<li>var_name: variable name as it appears in the dashboard</li>
+<li>var_order: number indicating the order in which variables appear in the dashboard. Variables are sorted by pillar_group and var_order.<br />
+</li>
+<li>spatial_level: the most granular level of disaggregation where a given variable is available in the data. For instance, if an indicator is available at ADM1 and ADM2, you should indicate ADM2 in this column. For instance, in the case of Zambia, this column should state <code>admin2_Districts</code> for those indicators available at ADM2 and <code>admin1_Provinces</code> for those available at ADM1.</li>
+<li>var_description: detailed description of a given variable indicating how it’s constructed and sources from which the variable is derived.</li>
+<li>var_units: unit of a variable (e.g., km, tonnes, minutes, USD) (optional)<br />
+</li>
+<li>pillar_group: numeric code used to group pillar</li>
+<li>pillar_name: pillar name<br />
+</li>
+<li>pillar_description: detailed description of a pillar (optional)</li>
+<li>fltr_exclude_pti: TRUE if you want to exclude a given variable from the PTI tab in the dashboard; FALSE otherwise</li>
+<li>fltr_exclude_explorer: TRUE if you want to exclude a given variable from the Data Explorer tab in the dashboard</li>
+<li>fltr_overlay_pti: Set it all FALSE.</li>
+<li>fltr_overlay_explorer: Set it all FALSE</li>
+<li>legend_revert_colours: TRUE if you want to reverse the legend color for a given variable; FALSE otherwise.</li>
+</ul></li>
+<li>point_data: Do not change. It’s just a placeholder.</li>
+<li>weights_table: Do not change. It’s just a placeholder.</li>
+<li>admin<code>##``LOCATION</code>: data at the <code>LOCATION</code> level (or ADM ##), which will be displayed in the dashboard.</li>
+</ul>
+<p>Note that the <code>metadata</code> sheet in the metadata generated in <code>xxxPTIdata/vignettes/100-compilation.Rmd</code> comes from <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code>. You need to manually edit this file <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code> to ensure that all indicators that you would like to have in the dashboard are included and described well in <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code>. When creating this metadata file, <strong>make sure that you should provide a description of a variable that is as thorough as possible.</strong> It should explain how a given indicator is constructed and what sources are used with as much details that you can provide as possible. See <code>zamPTIdata/data-clean/metadata/metadata.xlsx</code> as an example.</p>
+<p>Once all manual edits are made in <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code>, you can then run <code>xxxPTIdata/vignettes/100-compilation.Rmd</code> to compile the datasets and produce a metadata. Please note that you need to also manually edit <code>xxxPTIdata/vignettes/100-compilation.Rmd</code> to properly compile all datasets. This will leave you with a new metadata <code>mtdt-TIME.xlsx</code> and <code>admin_bounds.rds</code> created in the <code>xxxPTI/app-data</code> folder where TIME is the date and time of when the metadata is generated.</p>
+</div>
+<div id="metadata_pdf" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Generate a PDF document of a metadata<a href="pti-prep.html#metadata_pdf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once your metadata and <code>admin_bounds.rds</code> are both exported into the <code>xxxPTI/app-data</code> folder, run <code>xxxPTI/app-data/metadata.Rmd</code> to generate a PDF version of the metadata <code>metadata.pdf</code>, which will be made available and downloadable from the dashboard.</p>
+</div>
+<div id="landing_page" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Edit contents in the landing page of the dashboard<a href="pti-prep.html#landing_page" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What’s in <code>landing-page.md</code> gets displayed as a landing page for the dashboard. Customize the content for your purpose. See a concrete example from <a href="https://github.com/takaakimasaki/zamPTI/blob/main/landing-page.md"><code>zamPTI/landing-page.md</code></a>.</p>
+</div>
+<div id="prepare-zip-folder-that-contains-all-levels-of-shapefiles-for-download" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Prepare zip folder that contains all levels of shapefiles for download<a href="pti-prep.html#prepare-zip-folder-that-contains-all-levels-of-shapefiles-for-download" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To make the baseline shapefiles also available for users, zip all the shapefiles and save them in the <code>app-data</code> folder.</p>
+</div>
+<div id="launch-an-app" class="section level3 hasAnchor" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> Launch an app<a href="pti-prep.html#launch-an-app" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now you are ready to launch an app. Before that, you make sure that you’ve gotten all the ingriedients you would need to launch an app. The final <code>xxxPTI</code> folder should look like this:</p>
+<pre><code>+-- app-data
+|   +-- admin_bounds.rds
+|   +-- metadata.pdf
+|   +-- metadata.Rmd
+|   +-- mtdt.xlsx
+|   \-- shapefiles.rar
++-- app.R
++-- xxxPTIapp.Rproj
++-- landing-page.md
+\-- R
+    \-- _disable_autoload.R</code></pre>
+<p>where</p>
+<ul>
+<li><code>app-data/admin_bounds.rds</code>: a list object of all administrative boundary shapefiles (see )</li>
+<li><code>app-data/metadata.pdf</code>: PDF document of metadata (see)</li>
+<li><code>app-data/mtdt.xlsx</code>: metadata</li>
+<li><code>app-data/shapefiles.rar</code>: zipped folder containing all shapefiles for download</li>
+<li><code>app.R</code>: R script to launch an app</li>
+<li><code>xxxPTIapp.Proj</code>: proj file for the app</li>
+<li><code>landing-page.md</code>: content of the landing page of the dashboard</li>
+</ul>
+<p>The <code>app.R</code> script launches the app and could be used to deploy
+such app to an external server. Modify this to read all the inputs pertaining to your own <code>xxxPTI</code> folder:</p>
+<pre><code># Launch the ShinyApp (Do not remove this comment)
+# To deploy, run: rsconnect::deployApp()
+# Or use the blue button on top of this file
 
+library(shiny)
+library(devPTIpack)
+
+launch_pti(
+  shp_dta = readRDS(&quot;app-data/admin_bounds.rds&quot;),
+  inp_dta = devPTIpack::fct_template_reader(&quot;app-data/mtdt.xlsx&quot;),
+  app_name = &quot;Example country&quot;, 
+  show_waiter = TRUE, 
+  show_adm_levels = c(&quot;admin2&quot;), ##though not necessary, highly recommmend setting it at the highest level of geographcial disaggregation! This is going to be admin4 (wards) for Zambia, for instance. 
+  shapes_path = &quot;app-data/shapefiles.zip&quot;, 
+  mtdtpdf_path = &quot;app-data/metadata.pdf&quot;,
+  pti_landing_page = &quot;./landing-page.md&quot;
+)</code></pre>
+<p>That’s it! Hope you now see a beautiful dashboard show up on your screen!</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Iimi_etal_2016" class="csl-entry">
+Iimi, Atsushi, Farhad FarhadAhmed, Edward Charles Anderson, Adam Stone Diehl, Laba Maiyo, Tatiana Peralta-Quiros, and Kulwinder Singh Rao. 2016. <em>New Rural Access Index : Main Determinants and Correlation to Poverty</em>. Washington, DC: Policy Research Working Paper;No. 7876. World Bank. <a href="https://openknowledge.worldbank.org/handle/10986/25676">https://openknowledge.worldbank.org/handle/10986/25676</a>.
+</div>
+<div id="ref-JedwabStoreygard_2021" class="csl-entry">
+Jedwab, Rémi, and Adam Storeygard. 2021. <span>“<span class="nocase">The Average and Heterogeneous Effects of Transportation Investments: Evidence from Sub-Saharan Africa 1960–2010</span>.”</span> <em>Journal of the European Economic Association</em> 20 (1): 1–38. <a href="https://doi.org/10.1093/jeea/jvab027">https://doi.org/10.1093/jeea/jvab027</a>.
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>The <a href="https://github.com/takaakimasaki/zamPTIdata"><code>zamPTIdata</code></a> repo is a private repository so you need to request access. Please <a href="mailto:tmasaki@worldbank.org">contact Taka Masaki</a>.<a href="pti-prep.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>The utility of using <code>purrr::map</code> instead of <code>for</code> loop is explained <a href="https://rpubs.com/christianthieme/589762">here</a>.<a href="pti-prep.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>While there are many different measures of market access, one that we typically use is from <span class="citation">(<a href="#ref-JedwabStoreygard_2021" role="doc-biblioref">Jedwab and Storeygard 2021</a>)</span>.<a href="pti-prep.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>See, for instance, <span class="citation">(<a href="#ref-Iimi_etal_2016" role="doc-biblioref">Iimi et al. 2016</a>)</span> and <a href="https://rai.azavea.com/" class="uri">https://rai.azavea.com/</a><a href="pti-prep.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>You can simply copy this <code>Rmd</code> file from the <a href="https://github.com/takaakimasaki/zamPTIdata"><code>zamPTIdata</code></a> repo. See, for example, a sample <a href="https://github.com/takaakimasaki/zamPTIdata/blob/main/vignettes/100-compilation.Rmd">code</a> from the zamPTIdata repository.<a href="pti-prep.html#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -162,6 +833,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
