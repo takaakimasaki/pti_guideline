@@ -23,7 +23,7 @@
 <meta name="author" content="Takaaki Masaki" />
 
 
-<meta name="date" content="2022-09-07" />
+<meta name="date" content="2022-09-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -571,11 +571,17 @@ div.csl-indent {
 <p>In this specific case, there are four levels of shapefiles contained within this <code>list</code> object: ADM0 (country); ADM1 (Province); ADM2 (District); and ADM4 (Wards). We selected these four different levels of geographical aggregation for Zambia PTI because most indicators that we have for the country are available only at these levels.^{Of course, if you want to add more layers, you are free to do so but the number of layers you may wan to have in the dashboard depends on need and demand of your intended users.}.</p>
 <p>When you create this <code>RDS</code> file, it is critical that you have the following attributes:</p>
 <ul>
-<li>Each shapefile contains <code>admin\*Pcod</code>, <code>admin\*Name</code>, and <code>area</code> where <code>admin\*Pcod</code> is a location ID (which typically comes with the original shapefile you download online or obtain from colleagues but you can also create your own ID if you like); <code>admin\*Name</code> the name of a location; <code>area</code> is the size of area.</li>
+<li>This <code>RDS</code> file should contain a <code>list</code> object of all layers of shapefiles (e.g., ADM0, ADM1, ADM2, and so on). Each shapefile contained in the <code>list</code> object should have the following indicators:
+<ul>
+<li><code>admin\*Pcod</code>: a location ID (which typically comes with the original shapefile you download online or obtain from colleagues but you can also create your own ID if you like)</li>
+<li><code>admin\*Name</code>: the name of a location</li>
+<li><code>area</code>: the size of area. This should be computed after properly reprojecting the shapefile in the appropriate EPSG UTM so that the area is expressed in km^2.<br />
+</li>
+</ul></li>
 <li>For those shapefiles at ADM<code>x</code> where <code>x</code>&lt;<code>y</code> and <code>y</code> is the highest level of geographcial aggregation (which is almost always admin 0), make sure to include all the <code>admin\*Pcod</code> from shapefiles at admin <code>z</code> &gt; <code>x</code> so that the final <code>RDS</code> file can make a link across different levels of geographical data using <code>admin\*Pcod</code>. For example, the shapefile of ADM1 should contain admin0Pcod from the shapefile of ADM0 and the shapefile of ADM2 should contain admin0Pcod and admin1Pcod from the shapefiles of ADM0 and ADM1, and so on.</li>
 <li>Make sure to include ADM0 shapefile. Otherwise the R package used to launch a PTI dashboard will not run.</li>
 </ul>
-<p>With all these points in mind, let’s create a <code>RDS</code> file that contains the shapefiles of all levels. Below is just a sample code from the zamPTIdata repo:</p>
+<p>With all these points in mind, let’s create a <code>RDS</code> file that contains an <code>list</code> object containing all levels of shapefiles. Below is just a sample code from the zamPTIdata repo:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="pti-prep.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">##read ADM1 shapefile</span></span>
 <span id="cb6-2"><a href="pti-prep.html#cb6-2" aria-hidden="true" tabindex="-1"></a>admin1 <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">&quot;data-raw&quot;</span>,<span class="st">&quot;admin-boundaries&quot;</span>,<span class="st">&quot;grid3-zam-admin&quot;</span>,<span class="st">&quot;shapefiles&quot;</span>,<span class="st">&quot;admin1_provinces.shp&quot;</span>))</span>
 <span id="cb6-3"><a href="pti-prep.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -666,30 +672,28 @@ div.csl-indent {
 <p>Now that all your datasets are cleaned and ready to be merged, you can use <code>xxxPTIdata/vignettes/100-compilation.Rmd</code><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> to compile all datasets, create a metadata, which contains both the descriptions of all the indicators as well as the data to be displayed in the dashboard, and save the list data of all the administrative boundary shapefiles <code>admin_bounds.rds</code> in the <code>xxxPTI/app-data</code> folder.</p>
 <p>The metadata will contain the following sheets:</p>
 <ul>
-<li>general: contains country name (e.g., Zambia, Tanzania, Kenya)</li>
-<li>metadata: includes the following variables:
+<li><code>general</code>: contains country name (e.g., Zambia, Tanzania, Kenya)</li>
+<li><code>metadata</code>: includes the following variables:
 <ul>
-<li>var_code: variable name in the dataset</li>
-<li>var_name: variable name as it appears in the dashboard</li>
-<li>var_order: number indicating the order in which variables appear in the dashboard. Variables are sorted by pillar_group and var_order.<br />
+<li><code>var_code</code>: variable name in the dataset</li>
+<li><code>var_name</code>: variable name as it appears in the dashboard. <strong>DO NOT USE “:” in variable name because it can break the app compliation in devPTIpack.</strong></li>
+<li><code>var_order</code>: number indicating the order in which variables appear in the dashboard. Variables are sorted by pillar_group and var_order.<br />
 </li>
-<li>spatial_level: the most granular level of disaggregation where a given variable is available in the data. For instance, if an indicator is available at ADM1 and ADM2, you should indicate ADM2 in this column. For instance, in the case of Zambia, this column should state <code>admin2_Districts</code> for those indicators available at ADM2 and <code>admin1_Provinces</code> for those available at ADM1.</li>
-<li>var_description: detailed description of a given variable indicating how it’s constructed and sources from which the variable is derived.</li>
-<li>var_units: unit of a variable (e.g., km, tonnes, minutes, USD) (optional)<br />
-</li>
-<li>pillar_group: numeric code used to group pillar</li>
-<li>pillar_name: pillar name<br />
-</li>
-<li>pillar_description: detailed description of a pillar (optional)</li>
-<li>fltr_exclude_pti: TRUE if you want to exclude a given variable from the PTI tab in the dashboard; FALSE otherwise</li>
-<li>fltr_exclude_explorer: TRUE if you want to exclude a given variable from the Data Explorer tab in the dashboard</li>
-<li>fltr_overlay_pti: Set it all FALSE.</li>
-<li>fltr_overlay_explorer: Set it all FALSE</li>
-<li>legend_revert_colours: TRUE if you want to reverse the legend color for a given variable; FALSE otherwise.</li>
+<li><code>spatial_level</code>: the most granular level of disaggregation where a given variable is available in the data. For instance, if an indicator is available at ADM1 and ADM2, you should indicate ADM2 in this column. For instance, in the case of Zambia, this column should state <code>admin2_Districts</code> for those indicators available at ADM2 and <code>admin1_Provinces</code> for those available at ADM1.</li>
+<li><code>var_description</code>: detailed description of a given variable indicating how it’s constructed and sources from which the variable is derived.</li>
+<li><code>var_units</code>: unit of a variable (e.g., km, tonnes, minutes, USD) (optional)</li>
+<li><code>pillar_group</code>: numeric code used to group pillar</li>
+<li><code>pillar_name</code>: pillar name. <strong>DO NOT USE “:” in pillar name because it can break the app compliation in devPTIpack.</strong></li>
+<li><code>pillar_description</code>: detailed description of a pillar (optional)</li>
+<li><code>fltr_exclude_pti</code>: TRUE if you want to exclude a given variable from the PTI tab in the dashboard; FALSE otherwise</li>
+<li><code>fltr_exclude_explorer</code>: TRUE if you want to exclude a given variable from the Data Explorer tab in the dashboard</li>
+<li><code>fltr_overlay_pti</code>: Set it all FALSE.</li>
+<li><code>fltr_overlay_explorer</code>: Set it all FALSE</li>
+<li><code>legend_revert_colours</code>: TRUE if you want to reverse the legend color for a given variable; FALSE otherwise.</li>
 </ul></li>
-<li>point_data: Do not change. It’s just a placeholder.</li>
-<li>weights_table: Do not change. It’s just a placeholder.</li>
-<li>admin<code>##``LOCATION</code>: data at the <code>LOCATION</code> level (or ADM ##), which will be displayed in the dashboard.</li>
+<li><code>point_data</code>: Do not change. It’s just a placeholder.</li>
+<li><code>weights_table</code>: Do not change. It’s just a placeholder.</li>
+<li><code>admin</code>##<code>LOCATION</code>: data at the <code>LOCATION</code> level (or ADM ##), which will be displayed in the dashboard.</li>
 </ul>
 <p>Note that the <code>metadata</code> sheet in the metadata generated in <code>xxxPTIdata/vignettes/100-compilation.Rmd</code> comes from <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code>. You need to manually edit this file <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code> to ensure that all indicators that you would like to have in the dashboard are included and described well in <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code>. When creating this metadata file, <strong>make sure that you should provide a description of a variable that is as thorough as possible.</strong> It should explain how a given indicator is constructed and what sources are used with as much details that you can provide as possible. See <code>zamPTIdata/data-clean/metadata/metadata.xlsx</code> as an example.</p>
 <p>Once all manual edits are made in <code>xxxPTIdata/data-clean/metadata/metadata.xlsx</code>, you can then run <code>xxxPTIdata/vignettes/100-compilation.Rmd</code> to compile the datasets and produce a metadata. Please note that you need to also manually edit <code>xxxPTIdata/vignettes/100-compilation.Rmd</code> to properly compile all datasets. This will leave you with a new metadata <code>mtdt-TIME.xlsx</code> and <code>admin_bounds.rds</code> created in the <code>xxxPTI/app-data</code> folder where TIME is the date and time of when the metadata is generated.</p>
@@ -744,12 +748,14 @@ launch_pti(
   inp_dta = devPTIpack::fct_template_reader(&quot;app-data/mtdt.xlsx&quot;),
   app_name = &quot;Example country&quot;, 
   show_waiter = TRUE, 
-  show_adm_levels = c(&quot;admin2&quot;), ##though not necessary, highly recommmend setting it at the highest level of geographcial disaggregation! This is going to be admin4 (wards) for Zambia, for instance. 
+  show_adm_levels = c(&quot;admin2&quot;), 
   shapes_path = &quot;app-data/shapefiles.zip&quot;, 
   mtdtpdf_path = &quot;app-data/metadata.pdf&quot;,
   pti_landing_page = &quot;./landing-page.md&quot;
 )</code></pre>
-<p>That’s it! Hope you now see a beautiful dashboard show up on your screen!</p>
+<p>While the way you specify each option in the <code>launch_pti()</code> function should be relatively straightforward, it is worth paying particular attention to <code>show_adm_levels</code>. This is where you specify at what level(s) of geographical disaggregation PTIs and each indicator will be shown in the dashboard. Let’s say you have a poverty rate computed at the ADM2 and ADM4 levels in your data. If you just want to show it only at the ADM4 level, you can then specify <code>show_adm_levels=c("admin4")</code>. Alternatively, if you want to show at both ADM2 and ADM4 levels, you may specify <code>show_adm_levels=c("admin2","admin4")</code>.</p>
+<p>Now let’s say you specify <code>show_adm_levels=c("admin2")</code>, what would happen to those indicators that are only available at ADM3 and/or ADM4? Rest assured, the dashboard will show these variables at the lowest level where they are available.</p>
+<p>That’s it! Hope you now see a beautiful dashboard show up on your screen.</p>
 
 </div>
 </div>

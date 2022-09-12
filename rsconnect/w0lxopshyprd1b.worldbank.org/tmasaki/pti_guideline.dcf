@@ -5,9 +5,9 @@ account: tmasaki
 server: w0lxopshyprd1b.worldbank.org
 hostUrl: http://w0lxopshyprd1b.worldbank.org:3939/__api__
 appId: 992
-bundleId: 46967
-url: http://w0lxopshyprd1b.worldbank.org:3939/content/76e4467f-bf0f-449c-8e28-47445b558b92/
-when: 1662561993.23542
-lastSyncTime: 1662561993.23547
+bundleId: 47005
+url: http://w0lxopshyprd1b.worldbank.org:3939/pti-guideline/
+when: 1662702208.42172
+lastSyncTime: 1662702208.42174
 asMultiple: FALSE
 asStatic: TRUE
