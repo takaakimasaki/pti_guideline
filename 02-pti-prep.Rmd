@@ -66,7 +66,7 @@ knitr::kable(
 
 ```
 
-In this specific case, there are four levels of shapefiles contained within this `list` object: ADM0 (country); ADM1 (Province); ADM2 (District); and ADM4 (Wards). We selected these four different levels of geographical aggregation for Zambia PTI because most indicators that we have for the country are available only at these levels.^{Of course, if you want to add more layers, you are free to do so but the number of layers you may wan to have in the dashboard depends on need and demand of your intended users.}. 
+In this specific case, there are four levels of shapefiles contained within this `list` object: ADM0 (country); ADM1 (Province); ADM2 (District); and ADM4 (Wards). We selected these four different levels of geographical aggregation for Zambia PTI because most indicators that we have for the country are available only at these levels.^[Of course, if you want to add more layers, you are free to do so but the number of layers you may wan to have in the dashboard depends on need and demand of your intended users.] 
 
 When you create this `RDS` file, it is critical that you have the following attributes:
 
@@ -136,7 +136,7 @@ Another set of indicators that are commonly included in a PTI dashboard seeks to
 ## Setup: Launching a dashboard
 Now that you have clean data ready to be merged in the `data-clean` folder, it is time to prepare a dashboard. The way we do this is through `r-shiny`. There are many tutorials on `r-shiny` and if you are unfamiliar with it, we highly recommend that you take one of these tutorials. The most basic tutorial is available from [here](https://shiny.rstudio.com/tutorial/). 
 
-That said, you do not necessarily need to know nuts and bolts about `r-shiny` to launch a PTI dashboard. Because we routinely create a PTI dashboard with the same layout and functionalities for many different countries, we have created a R package specifically for this purpose: [`devPTIpack`](https://github.com/EBukin/devPTIpack). The package [website](https://github.com/EBukin/devPTIpack) offers a wide range of functions beyond just simply greating a dashboard so if you are interested in digging deeper, please refer to the package website. In this guideline, we will basically cover minimum steps required to launch an app using the package. 
+That said, you do not necessarily need to know nuts and bolts about `r-shiny` to launch a PTI dashboard. Because we routinely create a PTI dashboard with the same layout and functionalities for many different countries, we have created a R package specifically for this purpose: [`devPTIpack`](https://github.com/wbPTI/devPTIpack). The package [website](https://github.com/wbPTI/devPTIpack) offers a wide range of functions beyond just simply greating a dashboard so if you are interested in digging deeper, please refer to the package website. In this guideline, we will basically cover minimum steps required to launch an app using the package. 
 
 ### Install the `devPTIpack` package
 
@@ -144,7 +144,8 @@ The first thing you need to do is to create a folder specifically for your dashb
 
 ```{r pti_setup, echo=TRUE,comment=TRUE,eval=FALSE}
 # Install development version from GitHub
-remotes::install_github("EBukin/devPTIpack")
+remotes::install_github("wbPTI/devPTIpack")
+
 #devPTIpack::create_new_pti("PATH-TO-NEW-PROJECT-LOCATION/PROJECT-NAME")
 
 #-   `PATH-TO-NEW-PROJECT-LOCATION` is a relative or an absolute path to the folder, where the app should be created.

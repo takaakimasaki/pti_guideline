@@ -23,7 +23,7 @@
 <meta name="author" content="Takaaki Masaki" />
 
 
-<meta name="date" content="2022-09-27" />
+<meta name="date" content="2022-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -568,7 +568,7 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>In this specific case, there are four levels of shapefiles contained within this <code>list</code> object: ADM0 (country); ADM1 (Province); ADM2 (District); and ADM4 (Wards). We selected these four different levels of geographical aggregation for Zambia PTI because most indicators that we have for the country are available only at these levels.^{Of course, if you want to add more layers, you are free to do so but the number of layers you may wan to have in the dashboard depends on need and demand of your intended users.}.</p>
+<p>In this specific case, there are four levels of shapefiles contained within this <code>list</code> object: ADM0 (country); ADM1 (Province); ADM2 (District); and ADM4 (Wards). We selected these four different levels of geographical aggregation for Zambia PTI because most indicators that we have for the country are available only at these levels.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p>When you create this <code>RDS</code> file, it is critical that you have the following attributes:</p>
 <ul>
 <li>This <code>RDS</code> file should contain a <code>list</code> object of all layers of shapefiles (e.g., ADM0, ADM1, ADM2, and so on). Each shapefile contained in the <code>list</code> object should have the following indicators:
@@ -617,7 +617,7 @@ div.csl-indent {
 </div>
 <div id="computing-zonal-statistics" class="section level3 hasAnchor" number="3.1.3">
 <h3><span class="header-section-number">3.1.3</span> Computing zonal statistics<a href="pti-prep.html#computing-zonal-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>One common data operation that we perform is to compute zonal statistics based on raster data. Let’s say we want to compute the sum or mean of gridded raster population data from <a href="https://www.worldpop.org/">WorldPop</a> at each level of geographical disaggregation. The <a href="https://cran.r-project.org/web/packages/exactextractr/index.html"><code>exactextractr</code></a> package and <code>purrr::map</code> are very useful for this purpose.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> See <a href="https://github.com/wbPTI/zamPTIdata/blob/main/vignettes/06-population-high-res-data.R"><code>vignettes/06.population-high-res-data.R</code></a> from the <a href="https://github.com/wbPTI/zamPTIdata"><code>zamPTIdata</code></a> repo as an example.</p>
+<p>One common data operation that we perform is to compute zonal statistics based on raster data. Let’s say we want to compute the sum or mean of gridded raster population data from <a href="https://www.worldpop.org/">WorldPop</a> at each level of geographical disaggregation. The <a href="https://cran.r-project.org/web/packages/exactextractr/index.html"><code>exactextractr</code></a> package and <code>purrr::map</code> are very useful for this purpose.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> See <a href="https://github.com/wbPTI/zamPTIdata/blob/main/vignettes/06-population-high-res-data.R"><code>vignettes/06.population-high-res-data.R</code></a> from the <a href="https://github.com/wbPTI/zamPTIdata"><code>zamPTIdata</code></a> repo as an example.</p>
 <p>It is always suggested that zonal statistics generated based on raster data are computed at <em>all</em> levels of shapefiles. The reason is that when the dashboard is launched, these data can be displayed at different levels of aggregation if they are prepared for each level of shapefile.</p>
 </div>
 <div id="manually-matching-location-names" class="section level3 hasAnchor" number="3.1.4">
@@ -632,7 +632,7 @@ div.csl-indent {
 </div>
 <div id="accessibility" class="section level4 hasAnchor" number="3.1.5.2">
 <h4><span class="header-section-number">3.1.5.2</span> Accessibility<a href="pti-prep.html#accessibility" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Another common set of indicators that we typically generate includes measures of accessibility. Two common usedly indices include the Market Access Index (MAI)<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> and the Rural Access Index (RAI).<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. Since these indicators are included in almost all PTI dashboards, we created a R package specifically for this purpose. Please refer to <a href="https://github.com/wbPTI/devaccess">the <code>devaccess</code> package</a>. In the package <a href="https://github.com/wbPTI/devaccess">website</a>, you find concrete examples walking you through how these indices can be constructed based on publicly available data. You can also see how the MAI was calculated for Zambia in <a href="https://github.com/wbPTI/zamPTIdata/blob/main/vignettes/13-mai.R"><code>vignettes/13-mai.R</code></a>.</p>
+<p>Another common set of indicators that we typically generate includes measures of accessibility. Two common usedly indices include the Market Access Index (MAI)<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> and the Rural Access Index (RAI).<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Since these indicators are included in almost all PTI dashboards, we created a R package specifically for this purpose. Please refer to <a href="https://github.com/wbPTI/devaccess">the <code>devaccess</code> package</a>. In the package <a href="https://github.com/wbPTI/devaccess">website</a>, you find concrete examples walking you through how these indices can be constructed based on publicly available data. You can also see how the MAI was calculated for Zambia in <a href="https://github.com/wbPTI/zamPTIdata/blob/main/vignettes/13-mai.R"><code>vignettes/13-mai.R</code></a>.</p>
 </div>
 <div id="natural-disaster-and-conflict-risks" class="section level4 hasAnchor" number="3.1.5.3">
 <h4><span class="header-section-number">3.1.5.3</span> Natural disaster and conflict risks<a href="pti-prep.html#natural-disaster-and-conflict-risks" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -643,20 +643,21 @@ div.csl-indent {
 <div id="setup-launching-a-dashboard" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Setup: Launching a dashboard<a href="pti-prep.html#setup-launching-a-dashboard" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that you have clean data ready to be merged in the <code>data-clean</code> folder, it is time to prepare a dashboard. The way we do this is through <code>r-shiny</code>. There are many tutorials on <code>r-shiny</code> and if you are unfamiliar with it, we highly recommend that you take one of these tutorials. The most basic tutorial is available from <a href="https://shiny.rstudio.com/tutorial/">here</a>.</p>
-<p>That said, you do not necessarily need to know nuts and bolts about <code>r-shiny</code> to launch a PTI dashboard. Because we routinely create a PTI dashboard with the same layout and functionalities for many different countries, we have created a R package specifically for this purpose: <a href="https://github.com/EBukin/devPTIpack"><code>devPTIpack</code></a>. The package <a href="https://github.com/EBukin/devPTIpack">website</a> offers a wide range of functions beyond just simply greating a dashboard so if you are interested in digging deeper, please refer to the package website. In this guideline, we will basically cover minimum steps required to launch an app using the package.</p>
+<p>That said, you do not necessarily need to know nuts and bolts about <code>r-shiny</code> to launch a PTI dashboard. Because we routinely create a PTI dashboard with the same layout and functionalities for many different countries, we have created a R package specifically for this purpose: <a href="https://github.com/wbPTI/devPTIpack"><code>devPTIpack</code></a>. The package <a href="https://github.com/wbPTI/devPTIpack">website</a> offers a wide range of functions beyond just simply greating a dashboard so if you are interested in digging deeper, please refer to the package website. In this guideline, we will basically cover minimum steps required to launch an app using the package.</p>
 <div id="install-the-devptipack-package" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Install the <code>devPTIpack</code> package<a href="pti-prep.html#install-the-devptipack-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The first thing you need to do is to create a folder specifically for your dashboard. This folder needs to follow a certain structure. You can create it by using <code>create_new_pti()</code> in the <code>devPTIpack</code> package. For instance, if you want to create a dashboard for country xxx, you will run the following codes:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="pti-prep.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install development version from GitHub</span></span>
-<span id="cb7-2"><a href="pti-prep.html#cb7-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;EBukin/devPTIpack&quot;</span>)</span>
-<span id="cb7-3"><a href="pti-prep.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#devPTIpack::create_new_pti(&quot;PATH-TO-NEW-PROJECT-LOCATION/PROJECT-NAME&quot;)</span></span>
-<span id="cb7-4"><a href="pti-prep.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="pti-prep.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#-   `PATH-TO-NEW-PROJECT-LOCATION` is a relative or an absolute path to the folder, where the app should be created.</span></span>
-<span id="cb7-6"><a href="pti-prep.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="pti-prep.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#-   a new sub-folder with the app itself will be created with the name `PROJECT-NAME`.</span></span>
-<span id="cb7-8"><a href="pti-prep.html#cb7-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-9"><a href="pti-prep.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">##For instance, you can specify a path as follows:</span></span>
-<span id="cb7-10"><a href="pti-prep.html#cb7-10" aria-hidden="true" tabindex="-1"></a>devPTIpack<span class="sc">::</span><span class="fu">create_new_pti</span>(<span class="st">&quot;C:/Users/WB495141/GitHub/xxxPTI&quot;</span>)</span></code></pre></div>
+<span id="cb7-2"><a href="pti-prep.html#cb7-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;wbPTI/devPTIpack&quot;</span>)</span>
+<span id="cb7-3"><a href="pti-prep.html#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="pti-prep.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#devPTIpack::create_new_pti(&quot;PATH-TO-NEW-PROJECT-LOCATION/PROJECT-NAME&quot;)</span></span>
+<span id="cb7-5"><a href="pti-prep.html#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="pti-prep.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#-   `PATH-TO-NEW-PROJECT-LOCATION` is a relative or an absolute path to the folder, where the app should be created.</span></span>
+<span id="cb7-7"><a href="pti-prep.html#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="pti-prep.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#-   a new sub-folder with the app itself will be created with the name `PROJECT-NAME`.</span></span>
+<span id="cb7-9"><a href="pti-prep.html#cb7-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-10"><a href="pti-prep.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="do">##For instance, you can specify a path as follows:</span></span>
+<span id="cb7-11"><a href="pti-prep.html#cb7-11" aria-hidden="true" tabindex="-1"></a>devPTIpack<span class="sc">::</span><span class="fu">create_new_pti</span>(<span class="st">&quot;C:/Users/WB495141/GitHub/xxxPTI&quot;</span>)</span></code></pre></div>
 <p>This sample script will create a new folder called <code>xxxPTI</code> in this directory <code>C:/Users/WB495141/GitHub</code>. In it, you find the following file structure:</p>
 <pre><code>+-- app-data
 |   \-- metadata.Rmd
@@ -669,7 +670,7 @@ div.csl-indent {
 </div>
 <div id="metadata" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Create a metadata<a href="pti-prep.html#metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now that all your datasets are cleaned and ready to be merged, you can use <code>xxxPTIdata/vignettes/100-compilation.Rmd</code><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> to compile all datasets, create a metadata, which contains both the descriptions of all the indicators as well as the data to be displayed in the dashboard, and save the list data of all the administrative boundary shapefiles <code>admin_bounds.rds</code> in the <code>xxxPTI/app-data</code> folder.</p>
+<p>Now that all your datasets are cleaned and ready to be merged, you can use <code>xxxPTIdata/vignettes/100-compilation.Rmd</code><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> to compile all datasets, create a metadata, which contains both the descriptions of all the indicators as well as the data to be displayed in the dashboard, and save the list data of all the administrative boundary shapefiles <code>admin_bounds.rds</code> in the <code>xxxPTI/app-data</code> folder.</p>
 <p>The metadata will contain the following sheets:</p>
 <ul>
 <li><code>general</code>: contains country name (e.g., Zambia, Tanzania, Kenya)</li>
@@ -772,10 +773,11 @@ Jedwab, Rémi, and Adam Storeygard. 2021. <span>“<span class="nocase">The Aver
 <hr />
 <ol start="1">
 <li id="fn1"><p>The <a href="https://github.com/wbPTI/zamPTIdata"><code>zamPTIdata</code></a> repo is a private repository so you need to request access. Please <a href="mailto:tmasaki@worldbank.org">contact Taka Masaki</a>.<a href="pti-prep.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>The utility of using <code>purrr::map</code> instead of <code>for</code> loop is explained <a href="https://rpubs.com/christianthieme/589762">here</a>.<a href="pti-prep.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>While there are many different measures of market access, one that we typically use is from <span class="citation">(<a href="#ref-JedwabStoreygard_2021" role="doc-biblioref">Jedwab and Storeygard 2021</a>)</span>.<a href="pti-prep.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>See, for instance, <span class="citation">(<a href="#ref-Iimi_etal_2016" role="doc-biblioref">Iimi et al. 2016</a>)</span> and <a href="https://rai.azavea.com/" class="uri">https://rai.azavea.com/</a><a href="pti-prep.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>You can simply copy this <code>Rmd</code> file from the <a href="https://github.com/wbPTI/zamPTIdata"><code>zamPTIdata</code></a> repo. See, for example, a sample <a href="https://github.com/wbPTI/zamPTIdata/blob/main/vignettes/100-compilation.Rmd">code</a> from the zamPTIdata repository.<a href="pti-prep.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Of course, if you want to add more layers, you are free to do so but the number of layers you may wan to have in the dashboard depends on need and demand of your intended users.<a href="pti-prep.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>The utility of using <code>purrr::map</code> instead of <code>for</code> loop is explained <a href="https://rpubs.com/christianthieme/589762">here</a>.<a href="pti-prep.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>While there are many different measures of market access, one that we typically use is from <span class="citation">(<a href="#ref-JedwabStoreygard_2021" role="doc-biblioref">Jedwab and Storeygard 2021</a>)</span>.<a href="pti-prep.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>See, for instance, <span class="citation">(<a href="#ref-Iimi_etal_2016" role="doc-biblioref">Iimi et al. 2016</a>)</span> and <a href="https://rai.azavea.com/" class="uri">https://rai.azavea.com/</a><a href="pti-prep.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>You can simply copy this <code>Rmd</code> file from the <a href="https://github.com/wbPTI/zamPTIdata"><code>zamPTIdata</code></a> repo. See, for example, a sample <a href="https://github.com/wbPTI/zamPTIdata/blob/main/vignettes/100-compilation.Rmd">code</a> from the zamPTIdata repository.<a href="pti-prep.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
