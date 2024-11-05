@@ -1,0 +1,12 @@
+name: pti_guideline
+title: pti_guideline
+username: tmasaki
+account: tmasaki
+server: w0lxdshyprd1c01
+hostUrl: https://w0lxdshyprd1c01/__api__
+appId: 228
+bundleId: 505
+url: https://w0lxdshyprd1c01/pti_guide/
+version: 1
+asMultiple: FALSE
+asStatic: TRUE
